@@ -10,7 +10,7 @@ export async function getWeekPendingGoals() {
   const goalsCreatedUpToWeek = db.$with('goals_created_up_to_week').as(
     db
       .select({
-        id: goals.id,
+        id: goalCompletions.id,
         title: goals.title,
         desiredWeeklyFrequency: goals.desiredWeeklyFrequency,
         createdAt: goals.createdAt,
